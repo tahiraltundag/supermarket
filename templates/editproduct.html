@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {margin:0;}
+input[type=text], input[type=password] {
+  width: 350px;;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=number]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.registerbtn {
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 380px;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: rgb(16, 2, 141);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 25px 16px;
+  text-decoration: none;
+  font-size: 28px;
+  margin-left: 35px;
+}
+
+.nav1 {
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 30;
+    width: 100%;
+  }
+  
+  .nav1 a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 35px;
+  }
+
+
+
+.main {
+  padding: 50px;
+  margin-top: 80px;
+  
+   /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="{% url 'home' %}">Super Market Management System</a>
+  
+</div>
+<div class="nav1">
+  <a href="{% url 'frontpage' %}">Dashboard</a>
+    
+  <a href="{% url 'logoutpage' %}">Logout</a>
+</div>
+
+<div class="main">
+    <br>
+    <!--
+    <img src="static/images/supermarket.jpg" width="550" height="600" style="float:right;margin-top:-6em;" >
+    -->
+    <p>
+      
+      <div style="text-align: center;">
+
+  <h1 style="font-size: 20px;">Edit Product</h1>
+  
+  <hr style="color:black;width:400px; text-align:center ">
+  <br>
+  <form method="POST" style="color:black">
+    {% csrf_token %} 
+    {{ form.name }}
+    <br>
+    {{ form.company }}
+    <br>
+    {{ form.protype }}
+    <br>
+    {{ form.cost }}
+    <br>
+    <button type="submit" class="registerbtn">
+        Submit
+    </button>
+    
+  </form>
+  <!--
+   <form method="POST" action="">
+       {% csrf_token %}
+   <div>
+       {{ form.username }}
+   </div>
+   <div>
+       {{ form.password }}
+   </div>
+-->
+       
+   
+   
+   
+   
+   
+  </div>
+</p>
+
+  
+  </div>
+
+
+
+</body>
+</html>

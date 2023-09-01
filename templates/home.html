@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: rgb(16, 2, 141);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 25px 16px;
+  text-decoration: none;
+  font-size: 28px;
+  margin-left: 35px;
+}
+
+.nav1 {
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 30;
+    width: 100%;
+  }
+  
+  .nav1 a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 35px;
+  }
+
+
+
+.main {
+  padding: 50px;
+  margin-top: 80px;
+  
+   /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="{% url 'home' %}">Super Market Management System</a>
+  
+</div>
+<div class="nav1">
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'loginpage' %}">Login</a>
+</div>
+
+<div class="main">
+    <br>
+    <img src="static/images/supermarket.jpg" width="550" height="600" style="float:right;margin-top:-6em;" >
+    <p>
+  <h1 style="font-size: 20px;">About Super Market Management System</h1>
+  <hr style="color:black;width:600px;margin-left: 1px; ">
+  <p style="font-size:16px;width:48%;">
+      Super Market Management System is an online system wherein the Owner of the supermarket logs in as Administrator and can manage all the transactions made in the supermarket. He has the right to add products along with their price.
+      He can also edit and delete existing products in the supermarket. He also registers new customers in the supermarket with their personal details and quantity of all the products they purchase. The products added to the cart sum up to 
+      the price the customer needs to pay and his bill is generated. Thus, all the transactions made in the supermarket are stored in the database and automatically the bill is generated for the customer with the amount he needs to pay.
+   </p>
+  <h4>
+    To Test the Application, login as:
+    <br>
+    Username:admin 
+    <br>
+    Password:superadmin@11
+
+  </h4>
+</p>
+
+  
+  </div>
+
+
+
+</body>
+</html>
